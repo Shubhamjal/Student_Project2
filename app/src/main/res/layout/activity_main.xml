@@ -32,7 +32,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextText"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:layout_editor_absoluteX="176dp"
-        tools:textSize="22sp" />
+        tools:textSize="26sp" />
 
     <EditText
         android:id="@+id/editTextText"
@@ -60,7 +60,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
         app:layout_constraintTop_toBottomOf="@+id/editTextText"
         tools:layout_editor_absoluteX="176dp"
-        tools:textSize="22sp" />
+        tools:textSize="26sp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -88,7 +88,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
         tools:layout_editor_absoluteX="168dp"
-        tools:textSize="22sp" />
+        tools:textSize="26sp" />
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -116,7 +116,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextText3"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
         tools:layout_editor_absoluteX="176dp"
-        tools:textSize="22sp" />
+        tools:textSize="26sp" />
 
     <EditText
         android:id="@+id/editTextText3"
@@ -136,7 +136,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
@@ -148,14 +148,14 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/save" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/cancel" />
