@@ -1,6 +1,7 @@
 package com.example.student_project
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -27,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this,"onCreate",Toast.LENGTH_SHORT).show()
 
         btn=findViewById(R.id.button)
-
+val Intent=Intent(this,SecondActivity::class.java)
+        startActivity(Intent)
 
         btn?.setOnClickListener {
             Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
