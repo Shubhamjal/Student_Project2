@@ -11,4 +11,5 @@
     <string name="enter_your_address">Enter Your Address</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="enter_password">Enter Password</string>
 </resources>

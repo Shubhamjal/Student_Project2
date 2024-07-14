@@ -1,5 +1,6 @@
 package com.example.student_project
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -12,8 +13,8 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
     var btn: Button?=null//var declaration
-    var editText:EditText?= null
-    var test=""
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this,"onCreate",Toast.LENGTH_SHORT).show()
 
         btn=findViewById(R.id.button)
+
 
         btn?.setOnClickListener {
             Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
@@ -46,7 +48,26 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Toast.makeText(this,"OnResume",Toast.LENGTH_SHORT).show()
+    }
 
+    override fun onPause() {
+        super.onPause()
+        Toast.makeText(this,"onPause",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Toast.makeText(this,"onStop",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Toast.makeText(this,"OnResume",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Toast.makeText(this,"onRestart",Toast.LENGTH_SHORT).show()
     }
 
 }
