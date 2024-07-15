@@ -23,9 +23,10 @@ class SecondActivity : AppCompatActivity() {
             insets
         }
 
-        btn=findViewById(R.id.button4)
-        val Intent= Intent(this,MainActivity::class.java)
+        btn=findViewById(R.id.button3)
+        val Intent=Intent(this,SecondActivity::class.java)
         startActivity(Intent)
-
     }
+
+
 }

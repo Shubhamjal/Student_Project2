@@ -14,7 +14,6 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
     var btn: Button?=null//var declaration
-
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,49 +26,24 @@ class MainActivity : AppCompatActivity() {
         }
         Toast.makeText(this,"onCreate",Toast.LENGTH_SHORT).show()
 
-        btn=findViewById(R.id.button)
-val Intent=Intent(this,SecondActivity::class.java)
-        startActivity(Intent)
 
-        btn?.setOnClickListener {
+
+        btn=findViewById(R.id.button)
+        btn?.setOnClickListener {  //save button Toast
             Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
         }
 
         btn=findViewById(R.id.button2)
-
-        btn?.setOnClickListener {
+        btn?.setOnClickListener {  //Cancel button toast
             Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show()
         }
+        btn=findViewById(R.id.button)
+        btn?.setOnClickListener{
+        val Intent=Intent(this,SecondActivity::class.java)
+        startActivity(Intent)}
     }
 
-    override fun onStart() {
-        super.onStart()
-        Toast.makeText(this,"OnStart",Toast.LENGTH_SHORT).show()
-    }
 
-    override fun onResume() {
-        super.onResume()
-        Toast.makeText(this,"OnResume",Toast.LENGTH_SHORT).show()
-    }
 
-    override fun onPause() {
-        super.onPause()
-        Toast.makeText(this,"onPause",Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Toast.makeText(this,"onStop",Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Toast.makeText(this,"OnResume",Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Toast.makeText(this,"onRestart",Toast.LENGTH_SHORT).show()
-    }
 
 }
