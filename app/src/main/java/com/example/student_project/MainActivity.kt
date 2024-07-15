@@ -32,15 +32,15 @@ class MainActivity : AppCompatActivity() {
         btn?.setOnClickListener {  //save button Toast
             Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
         }
+        btn?.setOnClickListener{
+            val Intent=Intent(this,SecondActivity::class.java)
+            startActivity(Intent)}
 
         btn=findViewById(R.id.button2)
         btn?.setOnClickListener {  //Cancel button toast
             Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show()
         }
-        btn=findViewById(R.id.button)
-        btn?.setOnClickListener{
-        val Intent=Intent(this,SecondActivity::class.java)
-        startActivity(Intent)}
+
     }
 
 
