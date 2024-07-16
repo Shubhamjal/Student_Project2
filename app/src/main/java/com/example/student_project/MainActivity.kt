@@ -14,7 +14,6 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
     var btn: Button?=null//var declaration
-    var btn2: Button?=null//var declaration
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,25 +32,18 @@ class MainActivity : AppCompatActivity() {
         btn?.setOnClickListener {  //save button Toast
             Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show()
         }
-
+        btn?.setOnClickListener{
+            val Intent=Intent(this,SecondActivity::class.java)
+            startActivity(Intent)}
 
         btn=findViewById(R.id.button2)
         btn?.setOnClickListener {  //Cancel button toast
             Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show()
         }
 
-
-        btn2=findViewById(R.id.button5)
-        btn2?.setOnClickListener{
-            val Intent=Intent(this,SecondActivity::class.java)
-            startActivity(Intent)}
     }
 
 
 
 
 }
-
-
-
-
